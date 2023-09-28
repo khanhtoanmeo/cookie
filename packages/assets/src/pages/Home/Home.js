@@ -8,6 +8,10 @@ import {useStore} from '@assets/reducers/storeReducer';
  * @return {React.ReactElement}
  * @constructor
  */
+
+
+
+// toan cho
 export default function Home() {
   const [enabled, setEnabled] = useState(false);
   const {dispatch} = useStore();
