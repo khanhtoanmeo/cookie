@@ -1,2 +1,30 @@
-# This file stores configurations for your Shopify app.
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "cookie-test-app"
+client_id = "7676129582ca1195faa22e6ab38dab4c"
+application_url = "https://mounts-firewire-sponsors-cst.trycloudflare.com/auth/shopify"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = ""
+
+[auth]
+redirect_urls = [
+  "https://mounts-firewire-sponsors-cst.trycloudflare.com/auth/shopify/callback",
+  "https://mounts-firewire-sponsors-cst.trycloudflare.com/authSa/shopify/callback",
+  "https://mounts-firewire-sponsors-cst.trycloudflare.com/auth/shopify/embed/callback",
+  "https://localhost:3000/auth/shopify/callback",
+  "https://localhost:3000/authSa/shopify/callback",
+  "https://localhost:3000/auth/shopify/embed/callback"
+]
+
+[webhooks]
+api_version = "2023-07"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "avada-final-review.myshopify.com"
