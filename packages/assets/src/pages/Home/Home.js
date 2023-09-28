@@ -11,7 +11,7 @@ import {useStore} from '@assets/reducers/storeReducer';
 
 
 
-// toan cho
+// toan cho chet
 export default function Home() {
   const [enabled, setEnabled] = useState(false);
   const {dispatch} = useStore();
