@@ -77,12 +77,12 @@ export default function AppNavigation() {
             }
           },
           {
-            url: '/samples',
+            url: '/settings',
             icon: ShareMinor,
-            label: 'Samples',
-            selected: location.pathname === getUrl('/samples'),
+            label: 'Settings',
+            selected: location.pathname === getUrl('/settings'),
             onClick: () => {
-              history.push('/samples');
+              history.push('/settings');
             }
           }
         ].reduce(prepareMenu, [])}
