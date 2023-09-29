@@ -75,6 +75,15 @@ export default function AppNavigation() {
             onClick: () => {
               history.push('/');
             }
+          },
+          {
+            url: '/settings',
+            icon: ShareMinor,
+            label: 'Settings',
+            selected: location.pathname === getUrl('/settings'),
+            onClick: () => {
+              history.push('/settings');
+            }
           }
         ].reduce(prepareMenu, [])}
       />
