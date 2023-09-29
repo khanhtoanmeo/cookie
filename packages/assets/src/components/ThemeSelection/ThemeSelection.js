@@ -1,12 +1,24 @@
 import React from 'react';
 import './ThemeSelection.scss';
 
-function ThemeSelection({color, title, backgroundColor, hasBorder}) {
+function ThemeSelection({color, title, backgroundColor, hasBorder, selected, onSelect}) {
   return (
-    <button className="Avada__ChooseTheme-Button">
+    <button
+      onClick={() => onSelect(title)}
+      className="Avada__ChooseTheme-Button"
+      style={{
+        borderColor: selected.title === title ? '#06038d' : '#d5d5d5',
+        boxShadow: 'none'
+      }}
+    >
       <div
         className="Avada__ChooseTheme-InnerWrapper"
-        style={{backgroundColor: backgroundColor, color: color, borderWidth: hasBorder && '1px'}}
+        style={{
+          backgroundColor: backgroundColor,
+          color: color,
+          borderColor: hasBorder && '#c9c9c9',
+          borderStyle: hasBorder && 'solid'
+        }}
       >
         {title}
       </div>

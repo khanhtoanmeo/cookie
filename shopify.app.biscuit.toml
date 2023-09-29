@@ -2,7 +2,7 @@
 
 name = "biscuit"
 client_id = "f99a7e1b7b0e559392951409a9f070ea"
-application_url = "https://urw-exotic-guitars-gc.trycloudflare.com/auth/shopify"
+application_url = "https://priest-connect-lion-carroll.trycloudflare.com/auth/shopify"
 embedded = true
 
 [access_scopes]
@@ -11,9 +11,9 @@ scopes = ""
 
 [auth]
 redirect_urls = [
-  "https://urw-exotic-guitars-gc.trycloudflare.com/auth/shopify/callback",
-  "https://urw-exotic-guitars-gc.trycloudflare.com/authSa/shopify/callback",
-  "https://urw-exotic-guitars-gc.trycloudflare.com/auth/shopify/embed/callback",
+  "https://priest-connect-lion-carroll.trycloudflare.com/auth/shopify/callback",
+  "https://priest-connect-lion-carroll.trycloudflare.com/authSa/shopify/callback",
+  "https://priest-connect-lion-carroll.trycloudflare.com/auth/shopify/embed/callback",
   "https://localhost:3000/auth/shopify/callback",
   "https://localhost:3000/authSa/shopify/callback",
   "https://localhost:3000/auth/shopify/embed/callback"
