@@ -7,8 +7,7 @@ function ThemeSelection({color, title, backgroundColor, hasBorder, selected, onS
       onClick={() => onSelect(title)}
       className="Avada__ChooseTheme-Button"
       style={{
-        borderColor: selected.title === title ? '#06038d' : '#d5d5d5',
-        boxShadow: 'none'
+        borderColor: selected.title === title && '#06038d'
       }}
     >
       <div

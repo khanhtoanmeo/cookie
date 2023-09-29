@@ -28,6 +28,10 @@ export default function AppBridgeProvider({children}) {
           {
             label: 'Home',
             destination: '/'
+          },
+          {
+            label: 'Settings',
+            destination: '/settings'
           }
         ]}
       />

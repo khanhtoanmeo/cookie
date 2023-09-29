@@ -25,7 +25,6 @@ import HomeBannerWrapper from '@assets/components/Home/HomeBanner/HomeBannerWrap
  * @constructor
  */
 
-//Cho toan
 export default function Home() {
   const {dispatch} = useStore();
   const [open, setOpen] = useState(false);
@@ -35,7 +34,7 @@ export default function Home() {
       <Layout>
         <Layout.Section>
           <Card>
-            <SetupInformation handleCollapsible={handleCollapsible} />
+            <SetupInformation handleCollapsible={handleCollapsible} isCollapse={!open} />
             <CollapsibleSetupGuide isOpenGuide={open} />
           </Card>
         </Layout.Section>

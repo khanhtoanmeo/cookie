@@ -2,7 +2,7 @@ import {Card, Heading, Icon, ProgressBar, Stack, TextStyle} from '@shopify/polar
 import {ChevronDownMinor, ChevronUpMinor} from '@shopify/polaris-icons';
 import React from 'react';
 
-export default function SetupInformation({handleCollapsible}) {
+export default function SetupInformation({handleCollapsible, isCollapse = true}) {
   return (
     <Card.Section>
       <Stack>
@@ -11,7 +11,7 @@ export default function SetupInformation({handleCollapsible}) {
         </Stack.Item>
         <div onClick={handleCollapsible} className="Avada-IconCollapsible">
           <Stack.Item>
-            <Icon source={open ? ChevronUpMinor : ChevronDownMinor} />
+            <Icon source={isCollapse ? ChevronDownMinor : ChevronUpMinor} />
           </Stack.Item>
         </div>
       </Stack>
