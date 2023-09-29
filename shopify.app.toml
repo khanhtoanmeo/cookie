@@ -1,2 +1,30 @@
-# This file stores configurations for your Shopify app.
-scopes = ""
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "cookie-bar"
+client_id = "b7138b2abd767c7f71ac9aa6799a0e7e"
+application_url = "https://aug-driven-racks-cooper.trycloudflare.com/auth/shopify"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+use_legacy_install_flow = true
+
+[auth]
+redirect_urls = [
+  "https://aug-driven-racks-cooper.trycloudflare.com/auth/shopify/callback",
+  "https://aug-driven-racks-cooper.trycloudflare.com/authSa/shopify/callback",
+  "https://aug-driven-racks-cooper.trycloudflare.com/auth/shopify/embed/callback",
+  "https://localhost:3000/auth/shopify/callback",
+  "https://localhost:3000/authSa/shopify/callback",
+  "https://localhost:3000/auth/shopify/embed/callback"
+]
+
+[webhooks]
+api_version = "2023-07"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "avada-saas-product-team.myshopify.com"

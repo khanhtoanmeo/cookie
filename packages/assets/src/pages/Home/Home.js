@@ -9,9 +9,6 @@ import {useStore} from '@assets/reducers/storeReducer';
  * @constructor
  */
 
-
-
-// toan cho chet
 export default function Home() {
   const [enabled, setEnabled] = useState(false);
   const {dispatch} = useStore();
