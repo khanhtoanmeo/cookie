@@ -1,12 +1,10 @@
-import React, {useState} from 'react';
-import {Frame, Layout, Loading, Scrollable, Toast} from '@shopify/polaris';
+import React from 'react';
+import {Frame, Loading, Toast} from '@shopify/polaris';
 import PropTypes from 'prop-types';
 import {useStore} from '@assets/reducers/storeReducer';
 import {closeToast} from '@assets/actions/storeActions';
-import AppTopBar from '@assets/layouts/AppLayout/AppTopBar';
-import AppNavigation from '@assets/layouts/AppLayout/AppNavigation';
-import {isEmbeddedApp} from '@assets/config/app';
-import Footer from '@assets/components/Footer/Footer';
+
+import HomeBannerWrapper from '@assets/components/Home/HomeBanner/HomeBannerWrapper';
 
 /**
  * Render an app layout
@@ -19,33 +17,10 @@ export default function AppLayout({children}) {
   const {state, dispatch} = useStore();
   const {loading, toast} = state;
 
-  const [isNavOpen, setIsNavOpen] = useState(!isEmbeddedApp);
-  const toggleOpenNav = () => setIsNavOpen(prev => !prev);
-
-  const navigationClass = [
-    'Avada-ScrollBar--isSubdued',
-    'Avada-Frame__Navigation',
-    isNavOpen && 'Avada-Frame__Navigation--isExpanded'
-  ].filter(Boolean);
-
-  const contentClass = [
-    'Avada-Frame__Content',
-    isNavOpen && 'Avada-Frame__Content--isExpanded'
-  ].filter(Boolean);
-
   return (
-    <Frame topBar={<AppTopBar {...{isNavOpen, toggleOpenNav}} />}>
-      <div className="Avada-Frame">
-        <div className={navigationClass.join(' ')}>
-          <AppNavigation />
-        </div>
-        <Scrollable className={contentClass.join(' ')}>
-          {children}
-          <Layout>
-            <Footer />
-          </Layout>
-        </Scrollable>
-      </div>
+    <Frame>
+      {children}
+      <HomeBannerWrapper />
       {loading && <Loading />}
       {toast && <Toast onDismiss={() => closeToast(dispatch)} {...toast} />}
     </Frame>
