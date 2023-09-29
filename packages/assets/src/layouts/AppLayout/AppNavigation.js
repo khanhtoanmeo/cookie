@@ -84,6 +84,24 @@ export default function AppNavigation() {
             onClick: () => {
               history.push('/settings');
             }
+          },
+          {
+            url: '/feature-request',
+            icon: ShareMinor,
+            label: 'Feature Request',
+            selected: location.pathname === getUrl('/feature-request'),
+            onClick: () => {
+              history.push('/feature-request');
+            }
+          },
+          {
+            url: '/partners',
+            icon: ShareMinor,
+            label: 'More apps',
+            selected: location.pathname === getUrl('/partners'),
+            onClick: () => {
+              history.push('/partners');
+            }
           }
         ].reduce(prepareMenu, [])}
       />
