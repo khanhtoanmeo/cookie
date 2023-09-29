@@ -26,12 +26,8 @@ export default function AppBridgeProvider({children}) {
         }}
         navigationLinks={[
           {
-            label: 'Samples',
-            destination: '/samples'
-          },
-          {
-            label: 'Settings',
-            destination: '/settings'
+            label: 'Home',
+            destination: '/'
           }
         ]}
       />

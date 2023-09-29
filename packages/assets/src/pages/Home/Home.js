@@ -1,6 +1,22 @@
-import React, {useState} from 'react';
-import {Layout, Page, SettingToggle, TextStyle} from '@shopify/polaris';
+import React, {useCallback, useState} from 'react';
+import './Home.scss';
+import {
+  Card,
+  Collapsible,
+  Heading,
+  Icon,
+  Layout,
+  Page,
+  ProgressBar,
+  Stack,
+  TextStyle
+} from '@shopify/polaris';
 import {useStore} from '@assets/reducers/storeReducer';
+import {ChevronDownMinor, ChevronUpMinor, CircleTickMajor, TickMinor} from '@shopify/polaris-icons';
+import CollapsibleSetupGuide from '@assets/components/Home/HomeGuide/CollapsibleSetupGuide';
+import SetupInformation from '@assets/components/Home/HomeGuide/SetupInformation';
+import HomeHelpdeskWrapper from '@assets/components/Home/HomeHelpdesk/HomeHelpdeskWrapper';
+import HomeBannerWrapper from '@assets/components/Home/HomeBanner/HomeBannerWrapper';
 
 /**
  * Render a home page for overview
@@ -11,24 +27,20 @@ import {useStore} from '@assets/reducers/storeReducer';
 
 //Cho toan
 export default function Home() {
-  const [enabled, setEnabled] = useState(false);
   const {dispatch} = useStore();
-
+  const [open, setOpen] = useState(false);
+  const handleCollapsible = useCallback(() => setOpen(prev => !prev), []);
   return (
     <Page title="Dashboard">
       <Layout>
         <Layout.Section>
-          <SettingToggle
-            action={{
-              content: enabled ? 'Disable' : 'Enable',
-              onAction() {
-                setEnabled(prev => !prev);
-              }
-            }}
-            enabled={enabled}
-          >
-            <TextStyle>Our app is {enabled ? 'enabled' : 'disabled'} on your store</TextStyle>
-          </SettingToggle>
+          <Card>
+            <SetupInformation handleCollapsible={handleCollapsible} />
+            <CollapsibleSetupGuide isOpenGuide={open} />
+          </Card>
+        </Layout.Section>
+        <Layout.Section>
+          <HomeHelpdeskWrapper />
         </Layout.Section>
       </Layout>
     </Page>

@@ -2,7 +2,7 @@
 
 name = "cookie-test-app"
 client_id = "7676129582ca1195faa22e6ab38dab4c"
-application_url = "https://mounts-firewire-sponsors-cst.trycloudflare.com/auth/shopify"
+application_url = "https://treatment-follow-hon-bite.trycloudflare.com/auth/shopify"
 embedded = true
 
 [access_scopes]
@@ -11,9 +11,9 @@ scopes = ""
 
 [auth]
 redirect_urls = [
-  "https://mounts-firewire-sponsors-cst.trycloudflare.com/auth/shopify/callback",
-  "https://mounts-firewire-sponsors-cst.trycloudflare.com/authSa/shopify/callback",
-  "https://mounts-firewire-sponsors-cst.trycloudflare.com/auth/shopify/embed/callback",
+  "https://treatment-follow-hon-bite.trycloudflare.com/auth/shopify/callback",
+  "https://treatment-follow-hon-bite.trycloudflare.com/authSa/shopify/callback",
+  "https://treatment-follow-hon-bite.trycloudflare.com/auth/shopify/embed/callback",
   "https://localhost:3000/auth/shopify/callback",
   "https://localhost:3000/authSa/shopify/callback",
   "https://localhost:3000/auth/shopify/embed/callback"

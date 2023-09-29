@@ -75,15 +75,6 @@ export default function AppNavigation() {
             onClick: () => {
               history.push('/');
             }
-          },
-          {
-            url: '/samples',
-            icon: ShareMinor,
-            label: 'Samples',
-            selected: location.pathname === getUrl('/samples'),
-            onClick: () => {
-              history.push('/samples');
-            }
           }
         ].reduce(prepareMenu, [])}
       />
